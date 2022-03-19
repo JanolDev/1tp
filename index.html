@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <title>Oficjalna strona 1tp</title>
+    <script>
+        var IsMenuOpen = false;
+        var WhatTheme = true;
+        function OpenCloseMenu(){
+            if(IsMenuOpen == false){
+                document.getElementById('menu').style.display = "block";
+                IsMenuOpen=true;
+            } else if (IsMenuOpen == true){
+                document.getElementById('menu').style.display = "none";
+                IsMenuOpen=false;
+            }
+        }
+        function ChangeTheme(){
+            if(WhatTheme==true){
+
+                document.getElementById('nav').style.backgroundColor = "rgba(255, 255, 255, 0.74)";
+                document.getElementById('menu').style.backgroundColor = "rgba(255, 255, 255, 0.74)";
+                document.getElementById('main').style.backgroundColor = "rgba(255, 255, 255, 0.74)";
+                document.getElementById('h').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('h2').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('h3').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('h4').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('t').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('t2').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('t3').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('t4').style.color = "rgba(0, 0, 0, 0.74)"
+                document.getElementById('t5').style.color = "rgba(0, 0, 0, 0.74)"
+                WhatTheme = false;
+            }else if (WhatTheme==false){
+                document.getElementById('nav').style.backgroundColor = "rgba(0, 0, 0, 0.74)";
+                document.getElementById('menu').style.backgroundColor = "rgba(0, 0, 0, 0.74)";
+                document.getElementById('main').style.backgroundColor = "rgba(0, 0, 0, 0.74)";
+                document.getElementById('h').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('h2').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('h3').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('h4').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('t').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('t2').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('t3').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('t4').style.color = "rgba(255, 255, 255, 0.74)"
+                document.getElementById('t5').style.color = "rgba(255, 255, 255, 0.74)"
+                WhatTheme = true;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="nav">
+        
+        <center>
+            <a id="h" href="https://kacper.konin.pl/Lekcje">Notatki</a>&nbsp;&nbsp;
+            <a id="h2" href="img/plan.png">Plan Lekcji</a>&nbsp;&nbsp;
+            <a id="h3" href="https://docs.google.com/spreadsheets/d/1Fb7nP2hWYGEkS6P5sdBcES47QaJfaB1T_lkHlITH-jk/edit?usp=sharing">Budżet klasowy (tylko konta szkolne)</a>&nbsp;&nbsp;
+            <a id="h4" href="https://www.facebook.com/kacper.janowski.9461/">Twórca</a>&nbsp;&nbsp;
+        </center>
+        
+        
+    </div>
+    <img onclick="OpenCloseMenu();" src="img/menu.png" width="50" alt="">
+    <div id="menu">
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;
+        <button onclick="ChangeTheme();">motyw</button>
+
+    </div>
+    &nbsp;
+    <div id="main">
+        <center>
+        <text id="t">co nowego?</text>
+         <br><br>
+         <text id="t2">Chcesz cos przepisac? Znajdz to w kategorii <a id="t3" href="google.pl">Notatki</a></text><br>&nbsp;<hr id="t4"><br>
+         <text id="t5">Masz pomysly dotyczace strony lub znalazles blad? Napisz do janola na pv</text>
+        </center>
+
+    </div>
+   
+    <footer>&copy; janoldev 2022, <br>ver. 1.0.0</footer>
+</body>
+</html>
