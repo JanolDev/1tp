@@ -57,7 +57,7 @@ button{
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.74);
     width: 40%;
-    height: 350px;
+    height: 700px;
     transition: 0.2s;
 }
 #main2{
@@ -128,12 +128,12 @@ footer{
         height: 150px;
     }
     #main{
-        margin-left: 15%;
+        /* margin-left: 15%; */
         width: 70%;
         height: auto;
     }
     #main2{
-        margin-left: 15%;
+        /* margin-left: 15%; */
         width: 70%;
         height: auto;
     }
@@ -146,8 +146,8 @@ footer{
        
     }
     #main{
-        margin-left: 15%;
-        width: 70%;
+        margin-left: 1%;
+        width: 150%;
         height: auto;
     }
     #main2{
