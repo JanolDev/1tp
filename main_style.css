@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
 
 body{
+    background-color:rgba(73, 49, 129, 0.979);
     padding: 0;
     margin: 0;
     background-image: url(img/tlo.png); 
@@ -31,7 +32,7 @@ img{
     margin-left: 1%;
     display: none;
     background-color: rgba(0, 0, 0, 0.74);
-    /* background-color: rgba(255, 255, 255, 0.74); */
+   
     width: 10%;
     height: 25%;
     border-radius: 10px;
@@ -44,7 +45,15 @@ button{
     border-radius: 10px;
     transition: 0.2s;
 }
+.nav-items{
+/* border: 1px solid red; */
+width: 1050px;
+/* height: 59px; */
+padding-top: 0.5%;
+padding-left: 20%;
+}
 #nav{
+    
     margin-left: 5%;
     margin-top: 1%;
     border-radius: 10px;
@@ -71,7 +80,10 @@ button{
     height: 350px;
     transition: 0.2s;
 }
-
+#demo{
+    color: white;
+    font-size: 30px;
+}
 a{
     color: white;
     text-decoration: none;
@@ -83,6 +95,7 @@ a{
 a:hover{
     color: red;
     font-size: 35px;
+    
 }
 hr{
   width: 50%;
@@ -95,6 +108,7 @@ hr{
 
 
 footer{
+    transition:  0.2s;
     color: white;
     font-family: 'Roboto Thin';
     text-align: center;
@@ -102,6 +116,22 @@ footer{
     background-position: 0% 0%;
     position: fixed;
     bottom: 0pt;
+}
+#menu-style-img{
+    display:none;
+    transition:  0.2s;
+}
+#nav-menu{
+    transition:  0.2s;
+    border-radius: 10px;
+    margin-left: 15%;
+    background-color: rgba(0, 0, 0, 0.74);
+     display:none; 
+    width: 75%;
+    height: 250px;
+    transition-duration: 0.2s;
+    animation-duration: 0.2s;
+    
 }
 
 
@@ -126,8 +156,10 @@ footer{
         width: 30%;
         
     }
+ 
     #nav{
-        height: 150px;
+        /* width: 10%; */
+        height: 100px;
     }
     #main{
         margin-left: 15%;
@@ -147,6 +179,7 @@ footer{
          background-size:450%;
        
     }
+    
     #main{
         margin-left: 15%;
         width: 70%;
@@ -158,3 +191,37 @@ footer{
         height: auto;
     }
 }
+
+@media only screen and (max-width: 1350px){
+    .nav-items{
+        display: none;
+    }
+    
+    
+    #nav{
+        margin-left: 40%;
+        width: 15%;
+    }
+    #menu-style-img{
+        display: block;
+    }
+
+    
+}
+@media only screen and (max-width: 1550px){
+   .nav-items{
+   margin-left: -10%;
+   }
+}
+@media only screen and (max-width: 1355px){
+    .nav-items{
+    margin-left: -10%;
+    }
+ }
+ @media only screen and (min-width: 1350px){
+   
+    #nav-menu{
+        visibility:hidden; 
+    }
+ }
+

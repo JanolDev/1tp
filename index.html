@@ -1,3 +1,5 @@
+<!-- Ten kod to zupełne spaghetii. Nie polecam patrzeć xD -->
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -8,8 +10,18 @@
     <link rel="shortcut icon" href="img/logo.png">
     <title>Oficjalna strona 1tp</title>
     <script>
+        var IsNavMenuOpen = false;
         var IsMenuOpen = false;
         var WhatTheme = true;
+        function OpenCloseNavMenu(){
+            if(IsNavMenuOpen == false){
+                document.getElementById('nav-menu').style.display = "block";
+                IsNavMenuOpen=true;
+            } else if (IsNavMenuOpen == true){
+                document.getElementById('nav-menu').style.display = "none";
+                IsNavMenuOpen=false;
+            }
+        }
         function OpenCloseMenu(){
             if(IsMenuOpen == false){
                 document.getElementById('menu').style.display = "block";
@@ -56,21 +68,63 @@
 
             }
         }
+        var countDownDate = new Date("June 24, 2022 00:00:00").getTime();
+
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+
+ 
+  var distance = countDownDate - now;
+
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+  document.getElementById("demo").innerHTML = days + " dni " + hours + " godziny "
+  + minutes + " minuty " + seconds + " sekundy ";
+
+ 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Wakacje już są";
+  }
+}, 1000);
     </script>
 </head>
 <body>
+ 
     
     <div id="nav">
+        <img onclick="OpenCloseNavMenu();" id="menu-style-img"src="img/menu.png" alt="">
+        <div class="nav-items">
+
+            <center>
+                <br>&nbsp;
+                <a id="h" href="https://kacper.konin.pl/Lekcje">Notatki</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a id="h2" href="plan.html">Plan Lekcji</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a id="h3" href="https://docs.google.com/spreadsheets/d/1Fb7nP2hWYGEkS6P5sdBcES47QaJfaB1T_lkHlITH-jk/edit?usp=sharing">Budżet klasowy (tylko konta szkolne)</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a id="h4" href="https://www.facebook.com/kacper.janowski.9461/">Twórca</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </center>
+            
+        </div>
         
+    </div>
+    <div id="nav-menu">
         <center>
-            <br>&nbsp;
-            <a id="h" href="https://kacper.konin.pl/Lekcje">Notatki</a>&nbsp;&nbsp;
-            <a id="h2" href="plan.html">Plan Lekcji</a>&nbsp;&nbsp;
-            <a id="h3" href="https://docs.google.com/spreadsheets/d/1Fb7nP2hWYGEkS6P5sdBcES47QaJfaB1T_lkHlITH-jk/edit?usp=sharing">Budżet klasowy (tylko konta szkolne)</a>&nbsp;&nbsp;
-            <a id="h4" href="https://www.facebook.com/kacper.janowski.9461/">Twórca</a>&nbsp;&nbsp;
+
+            <a id="h" href="https://kacper.konin.pl/Lekcje">Notatki</a> <br>
+            <a id="h2" href="plan.html">Plan Lekcji</a><br>
+            <a id="h3" href="https://docs.google.com/spreadsheets/d/1Fb7nP2hWYGEkS6P5sdBcES47QaJfaB1T_lkHlITH-jk/edit?usp=sharing">Budżet klasowy (tylko konta szkolne)</a><br>
+            <a id="h4" href="https://www.facebook.com/kacper.janowski.9461/">Twórca</a><br>
         </center>
-        
-        
+            </center>
+            
+     
     </div>
     <img id="menuIMG" onclick="OpenCloseMenu();" src="img/menu.png" width="50" alt="">
     <div id="menu">
@@ -85,10 +139,9 @@
     &nbsp;
     <div id="main">
         <center>
-        <text id="t">Co nowego?</text>
-         <br><br><hr id="pos-up-hr"><br>
-         <text id="t2">Chcesz cos przepisac? Znajdz to w kategorii <a id="t3" href="google.pl">Notatki</a></text><br>&nbsp;<hr id="t4"><br>
-         <text id="t5">Masz pomysly dotyczace strony lub znalazles blad? Napisz do janola na pv</text>
+        <text id="t">Wakacje za:</text>
+         <br><br><br><br><hr id="pos-up-hr"><br>
+         <p id="demo"></p>
         </center>
 
     </div>
@@ -101,8 +154,8 @@
         </center>
 
     </div>
-  
+    
    
-    <footer>&copy; janoldev 2022, <br>ver: 1.0.1</footer>
+    <footer>&copy; janoldev 2022, <br>ver: 1.0.3</footer>
 </body>
 </html>
